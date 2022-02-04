@@ -1,12 +1,11 @@
 {
-  "name": "srcom-api-client",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "name": "@feline-dis/srcom-api-client",
+  "version": "1.0.2",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JonathanHansen98/srcom-api-client.git"
+    "url": "git+https://github.com/JonathanHansen98/srcom-api-client.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +19,10 @@
   },
   "dependencies": {
     "axios": "^0.25.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/JonathanHansen98/srcom-api-client/issues"
+  },
+  "homepage": "https://github.com/JonathanHansen98/srcom-api-client#readme",
+  "description": ""
 }
