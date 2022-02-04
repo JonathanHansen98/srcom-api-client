@@ -1,8 +1,7 @@
 {
   "name": "@feline-dis/srcom-api-client",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JonathanHansen98/srcom-api-client.git"
