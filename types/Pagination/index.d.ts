@@ -1,4 +1,4 @@
-export interface Pagination {
+export default interface Pagination {
   offset: number;
   max: number;
   size: number;

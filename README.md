@@ -1,6 +1,6 @@
 # srcom-api-client
 
-An API client for the speedrun.com API written in TypeScript.
+An API client for the speedrun.com API written in Js.
 
 ## Usage
 
