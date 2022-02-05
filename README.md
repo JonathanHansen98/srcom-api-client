@@ -1,11 +1,11 @@
-# srcom-api-client
+# srcom-api
 
 An API client for the speedrun.com API written in Js.
 
 ## Usage
 
 ```
-import SRComClient from "@feline-dis/srcom-api-client";
+import SRComClient from "srcom-api";
 
 const SRCom = new SRComClient(YOUR_API_KEY);
 
