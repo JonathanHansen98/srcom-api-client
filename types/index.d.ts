@@ -1,3 +1,5 @@
+export * from "./RequestHandler";
+
 export { default as Link } from "./Link";
 
 export { default as Pagination } from "./Pagination";
@@ -22,3 +24,6 @@ export * from "./Developer";
 
 export { default as Publisher } from "./Publisher";
 export * from "./Publisher";
+
+export { default as Leaderboard } from "./Leaderboard";
+export * from "./Leaderboard";

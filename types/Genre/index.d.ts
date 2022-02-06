@@ -10,7 +10,7 @@ export default interface Genre {
 
 export interface GenreParams {
   orderby?: "name";
-  direction: OrderDirections; }
+  direction: OrderDirections;
 }
 
 export interface GenreResponse {

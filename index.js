@@ -8,10 +8,16 @@ export default class SRComClient {
     this.#API_KEY = apiKey;
   }
 
-  async #requestHandler(path, params) {
+  async #requestHandler(path, params, opts = { addApiKey: false }) {
+    if (opts.addApiKey && !this.#API_KEY) {
+      throw new Error(
+        "API Key required to use this endpoint. Initialize the SRComClient class with your API Key."
+      );
+    }
+
     return (
       await axios.get(path, {
-        headers: { "X-API-Key": this.#API_KEY },
+        headers: opts.addApiKey ? { "X-API-Key": this.#API_KEY } : {},
         params,
       })
     ).data;
@@ -80,5 +86,25 @@ export default class SRComClient {
 
   async getRuns(params) {
     return await this.#requestHandler(`${this.BASE_URL}/runs`, params);
+  }
+
+  async getLeaderboard(game, category, params) {
+    return await this.#requestHandler(
+      `${this.BASE_URL}/leaderboards/${game}/category/${category}`,
+      params
+    );
+  }
+
+  async getLevelLeaderboard(game, category, level, params) {
+    return await this.#requestHandler(
+      `${this.BASE_URL}/leaderboards/${game}/level/${level}/${category}`,
+      params
+    );
+  }
+
+  async getProfile() {
+    return await this.#requestHandler(`${this.BASE_URL}/profile`, null, {
+      addApiKey: true,
+    });
   }
 }
