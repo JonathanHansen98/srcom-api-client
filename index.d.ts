@@ -104,17 +104,18 @@ declare class SRComClient {
   getGameType(id: string, params?: GameTypeParams): Promise<GameTypeResponse>;
 
   /**
-   * This will return all game types.
+   * This will return all engines.
    * - [Docs](https://github.com/speedruncomorg/api/blob/master/version1/engines.md#get-engines)
-   * @param params Sort parameters.
+   * @param {Object} params Sort parameters.
    */
   getEngines(params?: EngineParams): Promise<EnginesResponse>;
 
   /**
-   * This will retrieve a single game type, identified by its ID.
+   * This will retrieve a single engine, identified by its ID.
    * - [Docs](https://github.com/speedruncomorg/api/blob/master/version1/engines.md#get-enginesid)
-   * @param {string} id Genre ID
-   * @param {object} params Query Params
+   * @param {string} id - Genre ID
+   * @param {Object} params - Query Params
+   * @param {string} params.orderby - sorts alphanumerically by the developer name
    */
   getEngine(id: string, params: EngineParams): Promise<EngineResponse>;
 

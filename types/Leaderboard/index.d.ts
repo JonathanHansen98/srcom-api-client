@@ -1,8 +1,5 @@
 import Link from "../Link";
 import { OrderDirections } from "../OrderDirections";
-import Pagination from "../Pagination";
-
-export type Timing = "realtime" | "realtime_noloads" | "ingame";
 
 export default interface Leaderboard {
   weblink: string;
@@ -37,7 +34,7 @@ export default interface Leaderboard {
   /**
    * ``timing`` can be one of ``realtime``, ``realtime_noloads`` or ``ingame``.
    */
-  timing: Timing;
+  timing: "realtime" | "realtime_noloads" | "ingame";
   /**
    *  ``values`` is a mapping between variable ID and value ID.
    */
@@ -76,7 +73,7 @@ export interface LeaderboardParams {
   /**
    * Controls the sorting; can be one of `realtime`, `realtime_noloads` or `ingame`.
    */
-  timing: Timing;
+  timing: "realtime" | "realtime_noloads" | "ingame";
   /**
    * [ISO 8601 date string](https://en.wikipedia.org/wiki/ISO_8601#Dates); when given, only returns runs done before or on this date
    */

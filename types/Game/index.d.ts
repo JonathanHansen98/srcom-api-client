@@ -108,14 +108,6 @@ export default interface Game {
   links: [Link];
 }
 
-declare type GameSortParams =
-  | "name.int"
-  | "name.jap"
-  | "abbreviation"
-  | "released"
-  | "created"
-  | "similarity";
-
 export interface GameParams {
   /**
    * when given, performs a fuzzy search across game names and abbreviations
@@ -134,7 +126,7 @@ export interface GameParams {
    */
   gametype?: string;
   /**
-   * 	platform ID; when given, restricts to that platform
+   * platform ID; when given, restricts to that platform
    */
   platform?: string;
   /**
@@ -167,10 +159,17 @@ export interface GameParams {
    */
   romhack?: boolean;
   /**
+   *
    * You can control the sorting by using the query string parameters orderby and direction.
    * - See the [Docs](https://github.com/speedruncomorg/api/blob/master/version1/games.md#get-games) for detailed sort params.
    */
-  orderby?: GameSortParams;
+  orderby?:
+    | "name.int"
+    | "name.jap"
+    | "abbreviation"
+    | "released"
+    | "created"
+    | "similarity";
   /**
    * The direction can be either asc or desc.
    */
