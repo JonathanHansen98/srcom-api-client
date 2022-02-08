@@ -1,9 +1,8 @@
 {
   "name": "srcom-api",
   "version": "0.0.4",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JonathanHansen98/srcom-api-client.git"
@@ -21,5 +20,11 @@
     "url": "https://github.com/JonathanHansen98/srcom-api-client/issues"
   },
   "homepage": "https://github.com/JonathanHansen98/srcom-api-client#readme",
-  "description": ""
+  "description": "",
+  "readme": "./docs/README.md",
+  "devDependencies": {
+    "typedoc": "^0.22.11",
+    "typedoc-plugin-rename-defaults": "^0.4.0",
+    "typescript": "^4.5.5"
+  }
 }

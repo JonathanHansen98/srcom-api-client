@@ -26,11 +26,19 @@ import {
   LeaderboardResponse,
 } from "./types";
 
-export default class SRComClient {
+export * from "./types";
+
+/**
+ * Speedrun.com API Client
+ */
+declare class SRComClient {
+  /** @private */
   private API_KEY?: string;
 
+  /** @private */
   constructor(apiKey: string);
 
+  /** @private */
   private requestHandler(path: string, params: HandlerParams): HandlerResponse;
 
   /**
@@ -182,3 +190,5 @@ export default class SRComClient {
    */
   getProfile(): {};
 }
+
+export default SRComClient;

@@ -22,6 +22,7 @@ import {
   PublishersResponse,
 } from "..";
 
+/** @private */
 export type HandlerParams =
   | GameParams
   | GameTypeParams
@@ -31,6 +32,7 @@ export type HandlerParams =
   | PlatformParams
   | PublisherParams;
 
+/** @private */
 export type HandlerResponse =
   | GameResponse
   | GamesResponse

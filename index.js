@@ -1,6 +1,6 @@
-import axios from "axios";
+const axios = require("axios");
 
-export default class SRComClient {
+class SRComClient {
   #API_KEY;
   BASE_URL = "https://www.speedrun.com/api/v1";
 
@@ -108,3 +108,8 @@ export default class SRComClient {
     });
   }
 }
+
+module.exports = SRComClient;
+
+// Allow use of default import syntax in TypeScript
+module.exports.default = SRComClient;
